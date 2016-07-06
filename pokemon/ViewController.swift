@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController ,
     UICollectionViewDataSource,
@@ -15,12 +16,56 @@ class ViewController: UIViewController ,
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var pokemons = [Pokemon]()
+    var musicPlayer: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
+        parseCSVFile()
+        initAudio()
+    }
+    
+    
+    func initAudio()  {
+        
+        let path = NSBundle.mainBundle().pathForResource("pikachu", ofType: "mp3")
+        
+        do{
+            
+            musicPlayer = try AVAudioPlayer(contentsOfURL: NSURL(string: path!)!)
+            musicPlayer.prepareToPlay()
+            musicPlayer.numberOfLoops = 1
+            musicPlayer.play()
+            
+        }catch let err as NSError{
+            
+            print(err.debugDescription)
+        }
+    }
+    func parseCSVFile()  {
+        
+        
+        let path = NSBundle.mainBundle().pathForResource("pokemon", ofType: "csv")!
+        do{
+            
+            let csv = try Csv(contentsOfURL: path)
+            let rows = csv.rows
+            
+            for row in rows{
+                let pokeID = Int(row["id"]!)
+                let pokeName = row["identifier"]
+                pokemons.append(Pokemon(pokeName: pokeName!, pokeId: pokeID!))
+            }
+            
+            
+        }catch let err as NSError{
+            
+            print(err.debugDescription)
+        }
+        
     }
     
     
@@ -29,10 +74,7 @@ class ViewController: UIViewController ,
         let indentifier = "pokeCell"
         if let cell = collectionView.dequeueReusableCellWithReuseIdentifier(indentifier, forIndexPath: indexPath) as? PokemonCell{
             
-            let pokemon = Pokemon(pokeName: "POKE", pokeId: "\(indexPath.row)")
-        
-            cell.configureCell(pokemon)
-            
+            cell.configureCell(pokemons[indexPath.row])
             return cell
         }else{
             
@@ -46,7 +88,7 @@ class ViewController: UIViewController ,
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 718
+        return pokemons.count
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {

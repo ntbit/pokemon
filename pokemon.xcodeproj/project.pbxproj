@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E257091E1D2D717A00CC1E26 /* Pokemon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E257091D1D2D717A00CC1E26 /* Pokemon.ttf */; };
+		E25709201D2D738100CC1E26 /* pikachu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E257091F1D2D738100CC1E26 /* pikachu.mp3 */; };
 		E2F866AD1D2CFC7E00607BCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F866AC1D2CFC7E00607BCA /* AppDelegate.swift */; };
 		E2F866AF1D2CFC7E00607BCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F866AE1D2CFC7E00607BCA /* ViewController.swift */; };
 		E2F866B21D2CFC7E00607BCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F866B01D2CFC7E00607BCA /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E257091D1D2D717A00CC1E26 /* Pokemon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pokemon.ttf; sourceTree = "<group>"; };
+		E257091F1D2D738100CC1E26 /* pikachu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pikachu.mp3; sourceTree = "<group>"; };
 		E2F866A91D2CFC7E00607BCA /* pokemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pokemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2F866AC1D2CFC7E00607BCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2F866AE1D2CFC7E00607BCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +86,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E257091C1D2D6DD800CC1E26 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				E257091F1D2D738100CC1E26 /* pikachu.mp3 */,
+				E2F866DA1D2D0D4200607BCA /* pokemon.csv */,
+				E257091D1D2D717A00CC1E26 /* Pokemon.ttf */,
+			);
+			name = resource;
+			sourceTree = "<group>";
+		};
 		E2F866A01D2CFC7E00607BCA = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +119,7 @@
 		E2F866AB1D2CFC7E00607BCA /* pokemon */ = {
 			isa = PBXGroup;
 			children = (
+				E257091C1D2D6DD800CC1E26 /* resource */,
 				E2F866E61D2D1EAA00607BCA /* util */,
 				E2F866DF1D2D0EEC00607BCA /* service */,
 				E2F866DE1D2D0EE400607BCA /* controller */,
@@ -115,7 +130,6 @@
 				E2F866B31D2CFC7E00607BCA /* Assets.xcassets */,
 				E2F866B51D2CFC7E00607BCA /* LaunchScreen.storyboard */,
 				E2F866B81D2CFC7E00607BCA /* Info.plist */,
-				E2F866DA1D2D0D4200607BCA /* pokemon.csv */,
 			);
 			path = pokemon;
 			sourceTree = "<group>";
@@ -282,6 +296,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2F866B71D2CFC7E00607BCA /* LaunchScreen.storyboard in Resources */,
+				E257091E1D2D717A00CC1E26 /* Pokemon.ttf in Resources */,
+				E25709201D2D738100CC1E26 /* pikachu.mp3 in Resources */,
 				E2F866B41D2CFC7E00607BCA /* Assets.xcassets in Resources */,
 				E2F866DB1D2D0D4200607BCA /* pokemon.csv in Resources */,
 				E2F866B21D2CFC7E00607BCA /* Main.storyboard in Resources */,
@@ -540,6 +556,7 @@
 				E2F866D31D2CFC7E00607BCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2F866D41D2CFC7E00607BCA /* Build configuration list for PBXNativeTarget "pokemonTests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +565,7 @@
 				E2F866D61D2CFC7E00607BCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2F866D71D2CFC7E00607BCA /* Build configuration list for PBXNativeTarget "pokemonUITests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +574,7 @@
 				E2F866D91D2CFC7E00607BCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
