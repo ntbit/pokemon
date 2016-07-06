@@ -14,6 +14,7 @@
 		E2F866B71D2CFC7E00607BCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F866B51D2CFC7E00607BCA /* LaunchScreen.storyboard */; };
 		E2F866C21D2CFC7E00607BCA /* pokemonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F866C11D2CFC7E00607BCA /* pokemonTests.swift */; };
 		E2F866CD1D2CFC7E00607BCA /* pokemonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F866CC1D2CFC7E00607BCA /* pokemonUITests.swift */; };
+		E2F866DB1D2D0D4200607BCA /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = E2F866DA1D2D0D4200607BCA /* pokemon.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E2F866C81D2CFC7E00607BCA /* pokemonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pokemonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2F866CC1D2CFC7E00607BCA /* pokemonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pokemonUITests.swift; sourceTree = "<group>"; };
 		E2F866CE1D2CFC7E00607BCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2F866DA1D2D0D4200607BCA /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				E2F866B31D2CFC7E00607BCA /* Assets.xcassets */,
 				E2F866B51D2CFC7E00607BCA /* LaunchScreen.storyboard */,
 				E2F866B81D2CFC7E00607BCA /* Info.plist */,
+				E2F866DA1D2D0D4200607BCA /* pokemon.csv */,
 			);
 			path = pokemon;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			files = (
 				E2F866B71D2CFC7E00607BCA /* LaunchScreen.storyboard in Resources */,
 				E2F866B41D2CFC7E00607BCA /* Assets.xcassets in Resources */,
+				E2F866DB1D2D0D4200607BCA /* pokemon.csv in Resources */,
 				E2F866B21D2CFC7E00607BCA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
