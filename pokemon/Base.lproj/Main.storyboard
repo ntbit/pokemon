@@ -46,6 +46,9 @@
                                             <constraint firstAttribute="width" constant="30" id="5sO-P2-bva"/>
                                         </constraints>
                                         <state key="normal" image="ic_music_video_white_48pt"/>
+                                        <connections>
+                                            <action selector="toggleMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WZ8-nP-dor"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.15449076890945435" green="0.52461749315261841" blue="0.7739446759223938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -108,7 +111,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="b8z-OR-zBB">
+                            <searchBar contentMode="redraw" placeholder="Search for Pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="b8z-OR-zBB">
                                 <rect key="frame" x="0.0" y="48" width="320" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -134,6 +137,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="collectionView" destination="lHo-ud-KAU" id="qET-Tb-Rwl"/>
+                        <outlet property="searchBar" destination="b8z-OR-zBB" id="lSC-oM-Aj1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
